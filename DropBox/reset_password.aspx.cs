@@ -34,9 +34,9 @@ namespace DropBox
             if (password1==password2 ) {
                 try
                 {
-                    SqlConnection cn = new SqlConnection("Data Source=tcp:haney.database.windows.net,1433;Initial Catalog=dropbox;User ID=haney714@haney;Password=Rudra90337769;");
+                    SqlConnection cn = new SqlConnection("Connection String");
                     cn.Open();
-                    cn.ChangeDatabase("dropbox");
+                    cn.ChangeDatabase("dBName");
 
                     String str = "update Registration SET Password='"+password1+"' where UserName='" +session_uname+"'";
                     SqlCommand cmd = new SqlCommand(str, cn);

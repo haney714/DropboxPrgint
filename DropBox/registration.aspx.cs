@@ -27,12 +27,12 @@ namespace DropBox
 
         protected void Join_btn_click(object sender, EventArgs e)
         {
-            SqlConnection db_con = new SqlConnection("Data Source=tcp:haney.database.windows.net,1433;Initial Catalog=dropbox;User ID=haney714@haney;Password=Rudra90337769;");
+            SqlConnection db_con = new SqlConnection("Connection String");
 
             try
             {
                 db_con.Open();
-                db_con.ChangeDatabase("dropbox");
+                db_con.ChangeDatabase("dBName");
 
                 string sqlquery = "insert into Registration values('" + f_name + "','" + l_name + "','" + Username1 + "','" + Password1 + "','" + "null" + "','" + 6093340466 + "','" + email + "')";
                 SqlCommand cmd = new SqlCommand(sqlquery, db_con);
